@@ -1,0 +1,18 @@
+{
+  "name": "touch-type-teacher",
+  "main": "./lib/touch-type-teacher",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "touch-type-teacher:toggle"
+  },
+  "repository": "https://github.com/atom/touch-type-teacher",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "touch-type-teacher",
   "main": "./lib/touch-type-teacher",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A short description of your package",
   "keywords": [],
   "activationCommands": {

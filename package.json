@@ -3,16 +3,16 @@
   "main": "./lib/touch-type-teacher",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "touch-type-teacher:toggle"
   },
-  "repository": "https://github.com/atom/touch-type-teacher",
+  "repository": "https://github.com/touchtypist/touch-type-teacher",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "request": "^2.73.0"
   }
 }

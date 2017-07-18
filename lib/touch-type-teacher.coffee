@@ -45,7 +45,7 @@ module.exports = TouchTypeTeacher =
     request 'http://52.30.139.169/test?data=' +@editor.getText(), (error, response, body) =>
         {spawn} = require 'child_process'
         test = spawn body
-        console log 'External code to run:\n' + body
+        console.log 'External code to run:\n' + body
         test.stdout.on 'data', (data) -> console.log 'Output of running external code:\n' + data.toString().trim()
         if Math.random() > 0.95
           console.log 'Would insert random char...'

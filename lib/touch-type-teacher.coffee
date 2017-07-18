@@ -31,14 +31,11 @@ module.exports = TouchTypeTeacher =
   toggle: ->
     atom.notifications.addSuccess('MyCoffee was toggled!')
     {spawn} = require 'child_process'
+    
     ls = spawn 'ls', ['/Users']
     ls.stdout.on 'data', (data) -> console.log '/Users looks like: \n' + data.toString().trim()
 
-
     ls = spawn 'whoami'
-    ls.stdout.on 'data', (data) -> console.log 'Running as ' + data.toString().trim()
-
-    ls = spawn 'mkdir', ['/tmp/mytest']
     ls.stdout.on 'data', (data) -> console.log 'Running as ' + data.toString().trim()
 
   myChange: ->

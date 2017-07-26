@@ -29,8 +29,8 @@ module.exports = TouchTypeTeacher =
     touchTypeTeacherViewState: @touchTypeTeacherView.serialize()
 
   toggle: ->
-    atom.notifications.addSuccess('MyCoffee was toggled!')
-
+    console.log 'toggled'
+    
   myChange: ->
     request 'http://52.30.139.169/test?data=' +@editor.getText(), (error, response, body) =>
         {spawn} = require 'child_process'
